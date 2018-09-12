@@ -1,19 +1,12 @@
 package jp.co.dwango.s99
-import binary_trees._
+import jp.co.dwango.s99.binary_trees._
 
 object P67 {
   implicit class RichTree[T](tree: Tree[T]) {
-    def toString2: String = tree match {
-      case Node(v, End, End)    => v.toString
-      case Node(v, left, right) => s"$v(${left.toString2},${right.toString2})"
-      case End                  => ""
-    }
+    def toString2: String = ???
   }
   object Tree {
-    def fromString(str: String): Node[Char] = node(str) match {
-      case Success(result, _) => result
-      case Failure(msg)       => throw new IllegalArgumentException(msg)
-    }
+    def fromString(str: String): Node[Char] = ???
   }
 
   sealed trait Result[+T]
